@@ -939,14 +939,14 @@ public class SmallPNG {
             int i = 0;
             for (int j = 0; j < size; j++) {
                 if ((byte) colors[j] != (byte) 255) {
-                    indexes[i] = (byte) j;
+                    indexes[j] = (byte) i;
                     sortedColors[i++] = intToColor(colors[j]);
                 }
             }
             alphaSize = i;
             for (int j = 0; j < size; j++) {
                 if ((byte) colors[j] == (byte) 255) {
-                    indexes[i] = (byte) j;
+                    indexes[j] = (byte) i;
                     sortedColors[i++] = intToColor(colors[j]);
                 }
             }
